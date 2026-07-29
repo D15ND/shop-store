@@ -7,3 +7,8 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --sub-color: var(--chakra-colors-purple-600);
+  --line-color: var(--chakra-colors-gray-400);
+}

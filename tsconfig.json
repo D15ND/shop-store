@@ -17,7 +17,13 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/routes*": ["./src/routes/*"],
+      "@/components*": ["./src/components/*"],
+      "@/data*": ["./src/data/*"],
+      "@/pages*": ["./src/pages/*"],
+      "@/services*": ["./src/services/*"],
+      "@/types*": ["./src/types/*"]
     }
   },
   "include": ["src", "vite.config.ts"]
