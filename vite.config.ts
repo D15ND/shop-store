@@ -26,6 +26,7 @@ export default defineConfig({
       '@services': path.resolve(__dirname, 'src/services'),
       '@types': path.resolve(__dirname, 'src/types'),
       '@store': path.resolve(__dirname, 'src/store'),
+      '@shared': path.resolve(__dirname, 'src/shared'),
     },
   },
 });

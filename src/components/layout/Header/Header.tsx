@@ -12,8 +12,8 @@ import type { RootState } from '@/store/store';
 import styles from './Header.module.css';
 
 const Header = () => {
-  const cartIds = useSelector((state: RootState) => state.cart.productIds);
-  const cartQuantity = Array.from(new Set(cartIds)).length;
+  const cartProducts = useSelector((state: RootState) => state.cart.products);
+  const cartQuantity = cartProducts.length;
 
   return (
     <Box as="header" className={styles.header}>
@@ -32,10 +32,12 @@ const Header = () => {
       </Box>
       <Box className={styles.store_menu}>
         <ColorModeButton />
-        <IconButton aria-label="Search database" variant="ghost" className={styles.cart}>
-          <SlBasket />
-          <Text className={styles.cart_count}>{cartQuantity}</Text>
-        </IconButton>
+        <Link to={ROUTE_PATHS.CART}>
+          <IconButton aria-label="Search database" variant="ghost" className={styles.cart}>
+            <SlBasket />
+            <Text className={styles.cart_count}>{cartQuantity}</Text>
+          </IconButton>
+        </Link>
       </Box>
     </Box>
   );

@@ -4,25 +4,6 @@
   width: 100%;
 }
 
-.img_box {
-  display: block;
-  position: relative;
-}
-
-.img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.img_title {
-  font-size: 48px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .cards {
   display: flex;
   flex-wrap: wrap;

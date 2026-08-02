@@ -1,0 +1,93 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 10px;
+  max-width: 280px;
+  width: 100%;
+}
+
+.card_img_box {
+  max-width: 280px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 300px;
+}
+
+.card_img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  pointer-events: none;
+  user-select: none;
+  object-fit: contain;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+.order_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 320px;
+  width: 100%;
+  margin-left: auto;
+  padding: 20px 10px;
+}
+
+.buy_button {
+  max-width: 80px;
+  width: 100%;
+}
+
+.sum_cost {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cost_span {
+  color: var(--sub-color);
+}
+
+.spare_box {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 455px);
+}
+
+.spare_desc {
+  font-size: 30px;
+}
+
+.quantity_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 200px;
+  width: 100%;
+  margin: 0 auto;
+}
