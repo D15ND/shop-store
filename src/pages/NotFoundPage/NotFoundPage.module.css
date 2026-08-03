@@ -1,0 +1,24 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+  min-height: calc(100vh - 455px);
+  padding: 30px 0;
+}
+
+.title {
+  font-size: 80px;
+}
+
+.description {
+  font-size: 20px;
+}
+
+.button {
+  padding: 0 10px;
+}
