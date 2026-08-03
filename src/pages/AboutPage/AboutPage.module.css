@@ -1,0 +1,62 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  padding: 50px 0;
+}
+
+.info_box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.title_modification {
+  color: var(--sub-color);
+}
+
+.work_box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 250px;
+  width: 100%;
+  gap: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.container_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.box_guarantees {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.description {
+  color: var(--line-color);
+}
+
+.guarantees_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.guarantees_card_box {
+  display: flex;
+  flex-direction: column;
+}
