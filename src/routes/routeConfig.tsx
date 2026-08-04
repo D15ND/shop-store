@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 
 import RootLayout from '@/components/layout/RootLayout/RootLayout';
+import HomePage from '@/pages/HomePage/HomePage';
 import NotFoundPage from '@/pages/NotFoundPage/NotFoundPage';
 
 import { ROUTE_PATHS } from './routePaths';
@@ -14,7 +15,7 @@ export const appRoutes = [
     path: '/',
     element: <RootLayout />,
     children: [
-      { index: true, element: <p>HomePage</p> },
+      { index: true, element: <HomePage /> },
       { path: ROUTE_PATHS.SHOP, element: <ShopPage /> },
       { path: ROUTE_PATHS.ABOUT, element: <AboutPage /> },
       { path: ROUTE_PATHS.CART, element: <CartPage /> },
