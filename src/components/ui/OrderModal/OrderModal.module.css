@@ -1,0 +1,52 @@
+.buy_button {
+  width: 80px;
+  background-color: var(--chakra-colors-bg-inverted);
+  color: var(--chakra-colors-bg);
+}
+
+.popup {
+  padding: 30px;
+}
+
+.input {
+  padding-left: 10px;
+}
+
+.button {
+  max-width: 80px;
+  width: 100%;
+}
+
+.flex_box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.post_box {
+  max-width: 70px;
+  width: 100%;
+}
+
+.phone_box {
+  max-width: 140px;
+  width: 100%;
+}
+
+.names_box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.cost_span {
+  color: var(--sub-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
