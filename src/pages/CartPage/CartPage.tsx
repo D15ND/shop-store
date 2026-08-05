@@ -1,6 +1,7 @@
 import { Box, Button, Image, Text } from '@chakra-ui/react';
 import { useSelector } from 'react-redux';
 
+import OrderModal from '@/components/ui/OrderModal/OrderModal';
 import Preview from '@/shared/Preview/Preview';
 import type { RootState } from '@/store/store';
 
@@ -20,7 +21,7 @@ const CartPage = () => {
       ) : (
         <Box className={styles.box}>
           <Box className={styles.order_box}>
-            <Button className={styles.buy_button}>Buy</Button>
+            <OrderModal />
             <Text className={styles.sum_cost}>
               Total cost: ${' '}
               <Text as="span" className={styles.cost_span}>
