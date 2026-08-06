@@ -60,8 +60,8 @@ const OrderModal = () => {
                   <Field.Root className={styles.phone_box}>
                     <Field.Label>Phone number</Field.Label>
                     <Input
-                      placeholder="(375) 29-7654321"
-                      ref={withMask('(99) 99999-9999')}
+                      placeholder="(375)29-7654321"
+                      ref={withMask('(999)99-9999999')}
                       className={styles.input}
                     />
                   </Field.Root>
