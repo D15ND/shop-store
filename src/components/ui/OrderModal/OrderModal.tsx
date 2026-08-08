@@ -1,6 +1,7 @@
 import { Box, Button, Dialog, Field, Input, Portal, Stack, Text } from '@chakra-ui/react';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import { withMask } from 'use-mask-input';
 
 import type { RootState } from '@/store/store';
@@ -12,8 +13,20 @@ const OrderModal = () => {
   const products = useSelector((state: RootState) => state.cart.products);
   const sumCost = products.reduce((acc, curr) => acc + curr.price, 0).toFixed(2);
 
+  const [isOpen, setIsOpen] = useState(true);
+
+  const handleBuy = () => {
+    toast.success('The order has been placed');
+    setIsOpen(false);
+  };
+
   return (
-    <Dialog.Root initialFocusEl={() => ref.current} placement="center">
+    <Dialog.Root
+      initialFocusEl={() => ref.current}
+      placement="center"
+      open={isOpen}
+      onOpenChange={(e) => setIsOpen(e.open)}
+    >
       <Dialog.Trigger asChild>
         <Button variant="outline" className={styles.buy_button}>
           Buy
@@ -78,7 +91,9 @@ const OrderModal = () => {
                   Cancel
                 </Button>
               </Dialog.ActionTrigger>
-              <Button className={styles.button}>Buy</Button>
+              <Button className={styles.button} onClick={handleBuy}>
+                Buy
+              </Button>
             </Dialog.Footer>
           </Dialog.Content>
         </Dialog.Positioner>
