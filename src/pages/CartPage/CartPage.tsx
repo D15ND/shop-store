@@ -1,6 +1,7 @@
 import { Box, Button, Image, Text } from '@chakra-ui/react';
 import { useSelector } from 'react-redux';
 
+import CounterStepper from '@/components/ui/CounterStepper/CounterStepper';
 import OrderModal from '@/components/ui/OrderModal/OrderModal';
 import Preview from '@/shared/Preview/Preview';
 import type { RootState } from '@/store/store';
@@ -38,9 +39,7 @@ const CartPage = () => {
                 <Text>{title}</Text>
                 <Text>$ {price}</Text>
                 <Box className={styles.quantity_box}>
-                  <Button>-</Button>
-                  <Text>Quantity</Text>
-                  <Button>+</Button>
+                  <CounterStepper />
                 </Box>
                 <Button className={styles.card_button}>Remove</Button>
               </Box>
