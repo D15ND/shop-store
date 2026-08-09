@@ -1,5 +1,15 @@
+export { default as clothingAvif } from './clothing.avif';
 export { default as clothing } from './clothing.png';
+export { default as clothingWebp } from './clothing.webp';
+export { default as electronAvif } from './electron.avif';
 export { default as electron } from './electron.png';
+export { default as electronWebp } from './electron.webp';
+export { default as HomeAvif } from './Home.avif';
 export { default as Home } from './Home.jpg';
+export { default as HomeWebp } from './Home.webp';
+export { default as jewelryAvif } from './jewelry.avif';
 export { default as jewelry } from './jewelry.png';
+export { default as jewelryWebp } from './jewelry.webp';
+export { default as previewAvif } from './preview.avif';
 export { default as preview } from './preview.png';
+export { default as previewWebp } from './preview.webp';

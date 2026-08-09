@@ -1,8 +1,9 @@
-import { Box, Image, Text } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import type { ReactNode } from 'react';
 
-import image from '@/assets/images/preview.png';
+import { preview, previewAvif, previewWebp } from '@/assets/images';
 
+import ImageOptimization from './ImageOptimization/ImageOptimization';
 import styles from './Preview.module.css';
 
 type PreviewProp = {
@@ -12,7 +13,14 @@ type PreviewProp = {
 const Preview = ({ children }: PreviewProp) => {
   return (
     <Box className={styles.img_box}>
-      <Image src={image} alt="image" className={styles.img} />
+      <Box className={styles.img}>
+        <ImageOptimization
+          imgAvif={previewAvif}
+          imgWebp={previewWebp}
+          imgDef={preview}
+          alt="preview"
+        />
+      </Box>
       <Text as="h1" className={styles.img_title}>
         {children}
       </Text>
