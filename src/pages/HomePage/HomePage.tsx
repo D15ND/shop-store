@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router';
 import { Home, HomeAvif, HomeWebp } from '@/assets/images';
 import { ProductsList } from '@/data/products';
 import { ROUTE_PATHS } from '@/routes/routePaths';
-import ImageOptimization from '@/shared/Preview/ImageOptimization/ImageOptimization';
+import ImageOptimization from '@/shared/ImageOptimization/ImageOptimization';
 
 import styles from './HomePage.module.css';
 
