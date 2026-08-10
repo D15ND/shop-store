@@ -4,5 +4,12 @@ export type Cards = {
   price: number;
   description?: string;
   category?: string;
-  image: string;
+  images: string[];
+};
+
+export type ProductsResponse = {
+  products: Cards[];
+  total: number;
+  skip: number;
+  limit: number;
 };
