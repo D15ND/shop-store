@@ -1,9 +1,9 @@
 import { Box, Button, Dialog, Field, Input, Portal, Stack, Text } from '@chakra-ui/react';
 import { useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { toast } from 'react-toastify';
 import { withMask } from 'use-mask-input';
 
+import { toaster } from '@/components/ui/toaster';
 import type { RootState } from '@/store/store';
 
 import styles from './OrderModal.module.css';
@@ -16,7 +16,10 @@ const OrderModal = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   const handleBuy = () => {
-    toast.success('The order has been placed');
+    toaster.create({
+      description: 'The order has been placed',
+      type: 'success',
+    });
     setIsOpen(false);
   };
 

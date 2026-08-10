@@ -31,10 +31,10 @@ const CartPage = () => {
             </Text>
           </Box>
           <Box className={styles.cards}>
-            {products.map(({ id, image, title, price }) => (
+            {products.map(({ id, images, title, price }) => (
               <Box className={styles.card} key={id}>
                 <Box className={styles.card_img_box}>
-                  <Image src={image} alt="card" className={styles.card_img} />
+                  <Image src={images[0]} alt="card" className={styles.card_img} />
                 </Box>
                 <Text>{title}</Text>
                 <Text>$ {price}</Text>
