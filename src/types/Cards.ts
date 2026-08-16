@@ -13,3 +13,10 @@ export type ProductsResponse = {
   skip: number;
   limit: number;
 };
+
+export type ErrorResponse = {
+  status: number;
+  data: {
+    message: string;
+  };
+};

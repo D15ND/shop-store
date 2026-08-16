@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import cartReducer from './cartCount';
 import paginationReducer from './pagination';
+import { productsAPI } from './productsAPI';
 import totalReducer from './totalProducts';
 
 export const store = configureStore({
@@ -9,7 +10,9 @@ export const store = configureStore({
     cart: cartReducer,
     pagination: paginationReducer,
     total: totalReducer,
+    [productsAPI.reducerPath]: productsAPI.reducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productsAPI.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
