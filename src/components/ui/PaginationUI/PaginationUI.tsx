@@ -8,9 +8,8 @@ import type { RootState } from '@/store/store';
 
 import styles from './PaginationUI.module.css';
 
-const PaginationUI = () => {
+const PaginationUI = ({ total }: { total: number }) => {
   const page = useSelector((state: RootState) => state.pagination.page);
-  const total = useSelector((state: RootState) => state.total.total);
   const dispatch = useDispatch();
 
   return (
