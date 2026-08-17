@@ -54,36 +54,32 @@ const OrderModal = () => {
                   <Box className={styles.names_box}>
                     <Field.Root>
                       <Field.Label>First name</Field.Label>
-                      <Input placeholder="Ivan" ref={ref} className={styles.input} />
+                      <Input placeholder="Ivan" ref={ref} />
                     </Field.Root>
                     <Field.Root>
                       <Field.Label>Last name</Field.Label>
-                      <Input placeholder="Smith" type="text" className={styles.input} />
+                      <Input placeholder="Smith" type="text" />
                     </Field.Root>
                   </Box>
                   <Field.Label>Town</Field.Label>
-                  <Input placeholder="Minsk" className={styles.input} />
+                  <Input placeholder="Minsk" />
                 </Field.Root>
                 <Field.Root>
                   <Field.Label>Adress</Field.Label>
-                  <Input placeholder="Gagarina street" className={styles.input} />
+                  <Input placeholder="Gagarina street" />
                 </Field.Root>
                 <Box className={styles.flex_box}>
                   <Field.Root className={styles.post_box}>
                     <Field.Label>Post index</Field.Label>
-                    <Input placeholder="222160" ref={withMask('999999')} className={styles.input} />
+                    <Input placeholder="222160" ref={withMask('999999')} />
                   </Field.Root>
                   <Field.Root className={styles.phone_box}>
                     <Field.Label>Phone number</Field.Label>
-                    <Input
-                      placeholder="(375)29-7654321"
-                      ref={withMask('(999)99-9999999')}
-                      className={styles.input}
-                    />
+                    <Input placeholder="(375)29-7654321" ref={withMask('(999)99-9999999')} />
                   </Field.Root>
                   <Field.Root className={styles.email_box}>
                     <Field.Label>Email</Field.Label>
-                    <Input placeholder="ivanSmith@gmail.com" className={styles.input} />
+                    <Input placeholder="ivanSmith@gmail.com" />
                   </Field.Root>
                 </Box>
               </Stack>
