@@ -10,9 +10,9 @@
 }
 
 .img_title {
-  font-size: 48px;
+  font-size: clamp(30px, 5vw, 48px);
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 }

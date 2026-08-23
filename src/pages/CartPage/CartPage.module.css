@@ -55,10 +55,16 @@
   width: 100%;
   margin-left: auto;
   padding: 20px 10px;
+  @media (max-width: 830px) {
+    flex-direction: column-reverse;
+    gap: 10px;
+    max-width: 170px;
+    align-items: end;
+  }
 }
 
 .sum_cost {
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   font-weight: 700;
 }
 

@@ -13,7 +13,7 @@ const OrderModal = () => {
   const products = useSelector((state: RootState) => state.cart.products);
   const sumCost = products.reduce((acc, curr) => acc + curr.price, 0).toFixed(2);
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleBuy = () => {
     toaster.create({
