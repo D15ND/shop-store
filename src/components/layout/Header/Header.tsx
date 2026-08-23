@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router';
 
 import logo from '@/assets/icons/logo.svg';
+import BurgerMenu from '@/components/ui/BurgerMenu/BurgerMenu';
 import { ColorModeButton } from '@/components/ui/color-mode';
 import { Navigation } from '@/data/navigation';
 import { ROUTE_PATHS } from '@/routes/routePaths';
@@ -31,6 +32,9 @@ const Header = () => {
         </List.Root>
       </Box>
       <Box className={styles.store_menu}>
+        <Box className={styles.burger}>
+          <BurgerMenu />
+        </Box>
         <ColorModeButton />
         <Link to={ROUTE_PATHS.CART}>
           <IconButton aria-label="Search database" variant="ghost" className={styles.cart}>

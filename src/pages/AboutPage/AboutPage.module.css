@@ -41,12 +41,14 @@
 .box_guarantees {
   display: flex;
   justify-content: space-between;
+  align-items: start;
   width: 100%;
   padding: 40px 0;
 }
 
 .description {
   color: var(--line-color);
+  font-size: clamp(12px, 2vw, 16px);
 }
 
 .guarantees_card {

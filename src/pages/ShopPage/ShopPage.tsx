@@ -15,7 +15,6 @@ const ShopPage = () => {
   const dispatch = useDispatch();
   const page = useSelector((state: RootState) => state.pagination.page);
   const sortSelect = useSelector((state: RootState) => state.select.sortValue);
-  console.log(sortSelect);
 
   const { data, isLoading } = useGetProductsQuery(page);
 
@@ -47,7 +46,7 @@ const ShopPage = () => {
           sortProducts?.map(({ id, images, title, price }) => (
             <Box key={id} className={styles.card}>
               <Box className={styles.card_img_box}>
-                <Image src={images[0]} alt="card" className={styles.card_img} />
+                <Image src={images[0]} alt={title} className={styles.card_img} />
               </Box>
               <Text>{title}</Text>
               <Text>$ {price}</Text>
