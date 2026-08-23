@@ -1,6 +1,6 @@
 import './App.css';
 
-import { Spinner } from '@chakra-ui/react';
+import { Box, Spinner } from '@chakra-ui/react';
 import { Suspense } from 'react';
 import { RouterProvider } from 'react-router';
 
@@ -10,7 +10,13 @@ import { router } from './routes';
 
 function App() {
   return (
-    <Suspense fallback={<Spinner />}>
+    <Suspense
+      fallback={
+        <Box position="absolute" top="50%" left="50%">
+          <Spinner size={'xl'} />
+        </Box>
+      }
+    >
       <RouterProvider router={router} />
       <Toaster />
     </Suspense>
