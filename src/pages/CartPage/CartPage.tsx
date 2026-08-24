@@ -1,9 +1,10 @@
 import { Box, Button, Image, Text } from '@chakra-ui/react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import CounterStepper from '@/components/ui/CounterStepper/CounterStepper';
 import OrderModal from '@/components/ui/OrderModal/OrderModal';
 import Preview from '@/shared/Preview/Preview';
+import { removeCart } from '@/store/cartCount';
 import type { RootState } from '@/store/store';
 
 import styles from './CartPage.module.css';
@@ -11,6 +12,7 @@ import styles from './CartPage.module.css';
 const CartPage = () => {
   const products = useSelector((state: RootState) => state.cart.products);
   const sumCost = products.reduce((acc, curr) => acc + curr.price, 0).toFixed(2);
+  const dispatch = useDispatch();
 
   return (
     <Box className={styles.page}>
@@ -41,7 +43,9 @@ const CartPage = () => {
                 <Box className={styles.quantity_box}>
                   <CounterStepper />
                 </Box>
-                <Button className={styles.card_button}>Remove</Button>
+                <Button className={styles.card_button} onClick={() => dispatch(removeCart(id))}>
+                  Remove
+                </Button>
               </Box>
             ))}
           </Box>
