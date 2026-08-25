@@ -1,9 +1,10 @@
 import { Box, Button, Dialog, Field, Input, Portal, Stack, Text } from '@chakra-ui/react';
 import { useRef, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { withMask } from 'use-mask-input';
 
 import { toaster } from '@/components/ui/toaster';
+import { clearCart } from '@/store/cartCount';
 import type { RootState } from '@/store/store';
 
 import styles from './OrderModal.module.css';
@@ -12,6 +13,7 @@ const OrderModal = () => {
   const ref = useRef<HTMLInputElement | null>(null);
   const products = useSelector((state: RootState) => state.cart.products);
   const sumCost = products.reduce((acc, curr) => acc + curr.price, 0).toFixed(2);
+  const dispatch = useDispatch();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -20,6 +22,9 @@ const OrderModal = () => {
       description: 'The order has been placed',
       type: 'success',
     });
+
+    dispatch(clearCart());
+
     setIsOpen(false);
   };
 
