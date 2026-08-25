@@ -1,4 +1,4 @@
-import { createListCollection,Portal, Select } from '@chakra-ui/react';
+import { createListCollection, Portal, Select } from '@chakra-ui/react';
 import { useDispatch } from 'react-redux';
 
 import { setSelect } from '@/store/sortSelect';
